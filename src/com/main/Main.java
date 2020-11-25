@@ -60,9 +60,10 @@ public class Main {
         //LinkedLists
         //https://www.geeksforgeeks.org/linked-list-in-java/?ref=lbp
         LinkedList<Integer> linkedList = new LinkedList<>();
-        linkedList.add(1);
-        linkedList.remove(1);
+        linkedList.addFirst(1);
+        linkedList.removeFirst();
         linkedList.isEmpty();
+        linkedList.getFirst();
         linkedList.set(1,2);
 
 
