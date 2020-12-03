@@ -20,7 +20,9 @@ public class Main {
         int[] integer = new int[10];
         double[][] doubleMatrix = new double[4][4];
         String[] str = new String[10];
-
+        float[] flt = new float[10];
+        long[] lng = new long[10];
+        Arrays.copyOf(integer,integer.length*2);
         //ArrayList
         ArrayList<Integer> arrayList = new ArrayList<>();
         arrayList.add(1);
@@ -59,12 +61,10 @@ public class Main {
         //LinkedLists
         //https://www.geeksforgeeks.org/linked-list-in-java/?ref=lbp
         LinkedList<Integer> linkedList = new LinkedList<>();
-        linkedList.addFirst(1);
-        linkedList.removeFirst();
-        linkedList.isEmpty();
-        linkedList.getFirst();
+        linkedList.add(1);
+        linkedList.remove(1);
         linkedList.set(1,2);
-
+        linkedList.isEmpty();
         //Min-Heaps->PriorityQueue
         //https://www.geeksforgeeks.org/priority-queue-class-in-java-2/?ref=lbp
         PriorityQueue<Integer> minHeap = new PriorityQueue<>();
@@ -84,6 +84,7 @@ public class Main {
         Hashtable<Integer, String> hashtable = new Hashtable<>();
         hashtable.put(1,"Test");
         hashtable.get(1);
+        hashtable.remove(1);
 
         //Trees, Graphs and Tries
         //https://github.com/eugenp/tutorials/tree/master/data-structures
