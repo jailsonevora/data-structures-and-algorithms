@@ -21,7 +21,6 @@ public class Main {
         double[][] doubleMatrix = new double[4][4];
         String[] str = new String[10];
 
-
         //ArrayList
         ArrayList<Integer> arrayList = new ArrayList<>();
         arrayList.add(1);
@@ -66,7 +65,6 @@ public class Main {
         linkedList.getFirst();
         linkedList.set(1,2);
 
-
         //Min-Heaps->PriorityQueue
         //https://www.geeksforgeeks.org/priority-queue-class-in-java-2/?ref=lbp
         PriorityQueue<Integer> minHeap = new PriorityQueue<>();
@@ -80,7 +78,6 @@ public class Main {
         maxHeap.peek();
         maxHeap.add(1);
         maxHeap.poll();
-
 
         //Hash Tables
         //https://www.geeksforgeeks.org/hashtable-in-java/
