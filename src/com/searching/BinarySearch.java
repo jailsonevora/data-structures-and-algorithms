@@ -2,7 +2,7 @@ package com.searching;
 
 public class BinarySearch {
 
-    int binarySearch(int[] a, int x){
+    public static int binarySearch(int[] a, int x){
         int low = 0;
         int high = a.length - 1;
         int mid;
@@ -16,10 +16,10 @@ public class BinarySearch {
             else
                 return mid;
         }
-        return -1;
+        return -(low + 1);
     }
 
-    int binarySearchRecursive(int[] a, int x, int low, int high){
+    public static int binarySearchRecursive(int[] a, int x, int low, int high){
         if(low > high) return -1;
 
         int mid = (low + high) / 2;

@@ -1,4 +1,4 @@
-package com.main;
+package com.interview_preparation_kit;
 
 import java.util.*;
 
@@ -23,6 +23,8 @@ public class Main {
         float[] flt = new float[10];
         long[] lng = new long[10];
         Arrays.copyOf(integer,integer.length*2);
+        //Arrays.sor
+
         //ArrayList
         ArrayList<Integer> arrayList = new ArrayList<>();
         arrayList.add(1);
