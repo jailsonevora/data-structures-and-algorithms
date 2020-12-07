@@ -8,7 +8,7 @@ public class IceCreamParlor {
     public static void main(String[] arg) throws Exception {
 
         Scanner scanner = new Scanner(new File(
-                "C:\\Users\\Sangha\\IdeaProjects\\DataStrutures_Algorithms\\src\\com\\samples\\ice_cream_parlor\\input\\input14.txt"));//System.in
+                "src/com/sample_test_cases/ice_cream_parlor/input/input14.txt"));//System.in
 
         int t = scanner.nextInt();
         scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
