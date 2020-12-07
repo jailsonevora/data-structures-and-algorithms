@@ -23,7 +23,8 @@ public class Main {
         float[] flt = new float[10];
         long[] lng = new long[10];
         Arrays.copyOf(integer,integer.length*2);
-        //Arrays.sor
+        // Copy elements of a[] to b[]
+        //System.arraycopy(a, 0, b, 0, 3);
 
         //ArrayList
         ArrayList<Integer> arrayList = new ArrayList<>();
