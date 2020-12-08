@@ -11,7 +11,8 @@ import java.util.regex.*;
 public class LeftRotation {
 
     // O(2N) Drop Constant O(N)
-    // Complete the rotLeft function below.
+    // or
+    // O(T+N) where T = N => we Drop-Non Dominant term, we get O(N)
     static int[] rotLeft(int[] a, int d) {
         int[] temp = new int[a.length];
         for (int i = 0, j = d; j < a.length; i++,j++)
