@@ -10,6 +10,21 @@ import java.util.regex.*;
 
 public class NewYearChaos {
 
+    static void minimumBribesBruteForce(int[] q) {
+        int minimumBribes = 0;
+        for (int i = 0; i < q.length; i++) {
+            for (int j = i+1; j < q.length; j++){
+                if (q[i] > q[j])
+                    minimumBribes ++;
+                if ( (q[i] - (i+1)) > 2){
+                    System.out.println("Too chaotic");
+                    return;
+                }
+            }
+        }
+        System.out.println(minimumBribes);
+    }
+
     // Complete the minimumBribes function below.
     static void minimumBribes(int[] q) {
         int minimumBribes = 0;
@@ -42,7 +57,7 @@ public class NewYearChaos {
 
     public static void main(String[] args) throws IOException{
 
-        Scanner scanner = new Scanner(new File("src/com/sample_test_cases/new_year_chaos/input/input03.txt"));
+        Scanner scanner = new Scanner(new File("src/com/sample_test_cases/new_year_chaos/input/input01.txt"));
 
         int t = scanner.nextInt();
         scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
