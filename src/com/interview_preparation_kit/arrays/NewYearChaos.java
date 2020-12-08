@@ -10,6 +10,7 @@ import java.util.regex.*;
 
 public class NewYearChaos {
 
+    // O(N^2)
     static void minimumBribesBruteForce(int[] q) {
         int minimumBribes = 0;
         for (int i = 0; i < q.length; i++) {
@@ -25,6 +26,7 @@ public class NewYearChaos {
         System.out.println(minimumBribes);
     }
 
+    // O(N)
     // Complete the minimumBribes function below.
     static void minimumBribes(int[] q) {
         int minimumBribes = 0;
@@ -41,7 +43,7 @@ public class NewYearChaos {
         }
         System.out.println(minimumBribes);
     }
-
+    // O(N)
     static void minimumBribesReverse(int[] q) {
         int ans = 0;
         for (int i = q.length - 1; i >= 0; i--) {
