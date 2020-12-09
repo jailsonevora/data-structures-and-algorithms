@@ -16,13 +16,18 @@ public class RansomNote {
     static void checkMagazine(String[] magazine, String[] note) {
 
         HashMap<String,Integer> hashSMagazine = new HashMap<>();
+        // Copy all magazine words to the hashMap and counting the frequency of each words as an integer value
         for (String mag : magazine) {
             hashSMagazine.put(mag,hashSMagazine.getOrDefault(mag,0)+1);
         }
+        // After, we have completed the count of the frequency for each word, we will
+        // iterate through the note words to check if any of those words (Magazine) do not have enough frequency to match with the note repeated words
         for(String nte: note){
             if(hashSMagazine.getOrDefault(nte,0)==0){
                 System.out.println("No"); return;
             }
+            // Otherwise we will decrement the values of the frequency magazine words as we match it to the note words
+            // till we do not have the enough number of magazine word to use in our ransom..
             else hashSMagazine.put(nte,hashSMagazine.get(nte)-1);
         }
         System.out.println("Yes");
