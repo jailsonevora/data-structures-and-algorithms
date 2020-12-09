@@ -11,6 +11,7 @@ import java.util.regex.*;
 
 public class RansomNote {
 
+    // O(M+N)
     // Complete the checkMagazine function below.
     static void checkMagazine(String[] magazine, String[] note) {
 
