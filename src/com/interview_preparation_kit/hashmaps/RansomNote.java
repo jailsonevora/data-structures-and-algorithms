@@ -28,9 +28,28 @@ public class RansomNote {
         System.out.println("Yes");
     }
 
+    // Brute Force .
+    static void checkMagazineBF(String[] magazine, String[] note) {
+
+        int count = 0;
+        for (int i = 0; i < magazine.length; i++){
+            for (int j = 0; j < note.length; j++){
+                if(note[j].equals(magazine[i])) {
+                    count++;
+                    magazine[i] = null;
+                }
+            }
+        }
+        if (count == note.length)
+            System.out.println("Yes");
+        else
+            System.out.println("No");
+    }
+
+
     public static void main(String[] args) throws IOException {
 
-        Scanner scanner = new Scanner(new File("src/com/sample_test_cases/ransom_note/input/input20.txt"));
+        Scanner scanner = new Scanner(new File("src/com/sample_test_cases/ransom_note/input/input00.txt"));
 
         String[] mn = scanner.nextLine().split(" ");
 
@@ -58,7 +77,7 @@ public class RansomNote {
             note[i] = noteItem;
         }
 
-        checkMagazine(magazine, note);
+        checkMagazineBF(magazine, note);
 
         scanner.close();
     }
