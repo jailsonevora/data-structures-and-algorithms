@@ -28,15 +28,19 @@ public class RansomNote {
         System.out.println("Yes");
     }
 
-    // Brute Force .
+    // O(M*N)
+    // Brute Force
+    // Time limit exceeded for a large sample test
+    // This is not efficient
     static void checkMagazineBF(String[] magazine, String[] note) {
 
         int count = 0;
-        for (int i = 0; i < magazine.length; i++){
-            for (int j = 0; j < note.length; j++){
+        for (int j = 0; j < note.length; j++){
+            for (int i = 0; i < magazine.length; i++){
                 if(note[j].equals(magazine[i])) {
                     count++;
                     magazine[i] = null;
+                    break;
                 }
             }
         }
@@ -49,7 +53,7 @@ public class RansomNote {
 
     public static void main(String[] args) throws IOException {
 
-        Scanner scanner = new Scanner(new File("src/com/sample_test_cases/ransom_note/input/input00.txt"));
+        Scanner scanner = new Scanner(new File("src/com/sample_test_cases/ransom_note/input/input03.txt"));
 
         String[] mn = scanner.nextLine().split(" ");
 
