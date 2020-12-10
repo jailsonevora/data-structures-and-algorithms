@@ -1,4 +1,4 @@
-package com.interview_preparation_kit.arrays;
+package com.interview_preparation_kit.hashmaps;
 
 import java.io.*;
 import java.math.*;
