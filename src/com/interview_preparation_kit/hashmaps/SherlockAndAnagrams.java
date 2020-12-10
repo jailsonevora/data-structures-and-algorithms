@@ -10,7 +10,7 @@ import java.util.regex.*;
 import java.util.stream.Collectors;
 
 public class SherlockAndAnagrams {
-
+    // O(N^2 + N) Drop Non-dominant term => O(N^2)
     // Complete the sherlockAndAnagrams function below.
     static int sherlockAndAnagrams(String s) {
 
