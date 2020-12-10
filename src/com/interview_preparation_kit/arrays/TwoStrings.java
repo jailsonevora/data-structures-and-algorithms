@@ -13,12 +13,21 @@ public class TwoStrings {
 
     // Complete the twoStrings function below.
     static String twoStrings(String s1, String s2) {
-            return "";
+            HashSet<Character> hsMap = new HashSet<>();
+            for (char chS1: s1.toCharArray()) {
+                hsMap.add(chS1);
+            }
+
+            for (char chS2: s2.toCharArray()){
+                if(hsMap.contains(chS2))
+                    return "YES";
+            }
+            return "NO";
     }
 
     public static void main(String[] args) throws IOException {
 
-        Scanner scanner = new Scanner(new File("src/com/sample_test_cases/two_strings/input/input00.txt"));
+        Scanner scanner = new Scanner(new File("src/com/sample_test_cases/two_strings/input/input07.txt"));
 
         //BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
         BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
