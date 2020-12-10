@@ -11,6 +11,7 @@ import java.util.regex.*;
 
 public class TwoStrings {
 
+    // O(S1 + S2)
     // Complete the twoStrings function below.
     static String twoStrings(String s1, String s2) {
             HashSet<Character> hsMap = new HashSet<>();
