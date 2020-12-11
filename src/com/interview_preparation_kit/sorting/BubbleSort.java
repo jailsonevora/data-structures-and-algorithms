@@ -16,7 +16,7 @@ public class BubbleSort {
         a[i] = a[j];
         a[j] = temp;
     }
-
+    // O(N^2)
     // Complete the countSwaps function below.
     static void countSwaps(int[] a) {
         int countSwap = 0;
