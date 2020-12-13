@@ -30,6 +30,8 @@ public class MakingAnagrams {
 
         BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
 
+        int n = scanner.nextInt();
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 
         String a = scanner.nextLine();
 
