@@ -18,7 +18,14 @@ public class MakingAnagrams {
         Map<String,Integer> hsMp = new HashMap<>();
 
         for (int i = 0; i < a.length(); i++) {
-            hsMp.put(new String(a.substring(i, i++).toCharArray()), hsMp.getOrDefault(new String(a.substring(i, i++).toCharArray()), 0)+1);
+            String key = new String(a.substring(i, i + 1).toCharArray());
+            hsMp.put(key, hsMp.getOrDefault(key, 0)+1);
+        }
+
+        for (int i = 0; i < b.length(); i++) {
+            String key = new String(b.substring(i, i + 1).toCharArray());
+            if (hsMp.containsKey(key))
+                hsMp.put(key, hsMp.get(key)-1);
         }
 
         return 1;
