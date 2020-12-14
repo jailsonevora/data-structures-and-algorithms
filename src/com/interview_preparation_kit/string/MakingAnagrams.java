@@ -12,6 +12,9 @@ import java.util.regex.*;
 
 public class MakingAnagrams {
 
+    // Big O -> O(A + B + (A ∩ B))
+    // Drop Non-Dominant term => O(A+B)
+    // If B > A it is O(B) otherwise if A > B it is O(A)
     // Complete the makeAnagram function below.
     static int makeAnagram(String a, String b) {
 
