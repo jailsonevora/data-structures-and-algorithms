@@ -15,32 +15,24 @@ public class MakingAnagrams {
     // Complete the makeAnagram function below.
     static int makeAnagram(String a, String b) {
 
-        Map<String,Integer> hsMp = new HashMap<>();
+        Map<String,Integer> hsMpA = new HashMap<>();
 
         for (int i = 0; i < a.length(); i++) {
             String keyA = new String(a.substring(i, i + 1).toCharArray());
-            hsMp.put(keyA, hsMp.getOrDefault(keyA, 0)+1);
+            hsMpA.put(keyA, hsMpA.getOrDefault(keyA, 0)+1);
         }
 
         for (int i = 0; i < b.length(); i++) {
             String keyB = new String(b.substring(i, i + 1).toCharArray());
-            if (hsMp.containsKey(keyB)){
-                hsMp.put(keyB, hsMp.get(keyB)-1);
-            }
-            else
-                hsMp.put(keyB, hsMp.getOrDefault(keyB, 0)+1);
+            hsMpA.put(keyB, hsMpA.getOrDefault(keyB, 0)-1);
         }
 
         int count = 0;
-        for (Map.Entry str : hsMp.entrySet()){
-            Integer integer = (int) str.getValue();
-            if(integer < 0)
-                count = count + Math.abs(integer);//(hsMp.get(key) - (hsMp.get(key)*2) );
-            else if (integer >= 0)
-                count += integer;
+        for (Map.Entry str : hsMpA.entrySet()){
+            count  += Math.abs((int) str.getValue());
         }
 
-        return ( (a.length()+1) + (b.length()+1) ) - count;
+        return count;
     }
 
     public static void main(String[] args) throws IOException {
