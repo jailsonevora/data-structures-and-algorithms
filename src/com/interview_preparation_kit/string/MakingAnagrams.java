@@ -33,12 +33,9 @@ public class MakingAnagrams {
 
     public static void main(String[] args) throws IOException {
 
-        Scanner scanner = new Scanner(new File("src/com/sample_test_cases/sherlock_and_anagrams/input/input00.txt"));
+        Scanner scanner = new Scanner(new File("src/com/sample_test_cases/making_anagrams/input/input00.txt"));
 
         BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
-
-        int n = scanner.nextInt();
-        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 
         String a = scanner.nextLine();
 
