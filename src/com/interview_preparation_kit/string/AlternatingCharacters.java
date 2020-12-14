@@ -10,6 +10,8 @@ import java.util.regex.*;
 
 public class AlternatingCharacters {
 
+    // Big O-> O(S + Hsp) where we know that Hsp is always less S.length()
+    // So we Drop-Non Dominant term and we get O(S)
     // Complete the alternatingCharacters function below.
     static int alternatingCharacters(String s) {
         Map<String,Integer> hsMp = new HashMap<>();
