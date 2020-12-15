@@ -13,12 +13,39 @@ public class MinimumAbsoluteDifferenceInAnArray {
     // Complete the minimumAbsoluteDifference function below.
     static int minimumAbsoluteDifference(int[] arr) {
 
-        return 1;
+        int minimumABS = Integer.MAX_VALUE;
+        Arrays.sort(arr);
+        for (int i = 0; i < arr.length - 1; i++) {
+            int result = (arr[i+1]) - (arr[i]);
+            if (result < 0 )
+                result = result - (result*2);
+
+            if(minimumABS > result)
+                minimumABS = result;
+        }
+        return minimumABS;
+    }
+
+    // Complete the minimumAbsoluteDifference function below.
+    static int minimumAbsoluteDifferenceBruteForce(int[] arr) {
+
+        int minimumABS = Integer.MAX_VALUE, result = 0;
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i+1; j < arr.length; j++) {
+                result = (arr[i]) - (arr[j]);
+                if (result < 0 )
+                    result = result - (result*2);
+
+                if(minimumABS > result)
+                    minimumABS = result;
+            }
+        }
+        return minimumABS;
     }
 
     public static void main(String[] args) throws IOException {
 
-        Scanner scanner = new Scanner(new File("src/com/sample_test_cases/minimum_absolute_difference_in_an_array/input/input00.txt"));
+        Scanner scanner = new Scanner(new File("src/com/sample_test_cases/minimum_absolute_difference_in_an_array/input/input10.txt"));
 
         BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
 
