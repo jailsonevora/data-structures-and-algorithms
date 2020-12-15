@@ -20,8 +20,6 @@ public class MinimumAbsoluteDifferenceInAnArray {
         Arrays.sort(arr);
         for (int i = 0; i < arr.length - 1; i++) {
             int result = (arr[i+1]) - (arr[i]);
-            if (result < 0 )
-                result = result - (result*2);
 
             if(minimumABS > result)
                 minimumABS = result;
@@ -49,7 +47,7 @@ public class MinimumAbsoluteDifferenceInAnArray {
 
     public static void main(String[] args) throws IOException {
 
-        Scanner scanner = new Scanner(new File("src/com/sample_test_cases/minimum_absolute_difference_in_an_array/input/input10.txt"));
+        Scanner scanner = new Scanner(new File("src/com/sample_test_cases/minimum_absolute_difference_in_an_array/input/input01.txt"));
 
         BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
 
