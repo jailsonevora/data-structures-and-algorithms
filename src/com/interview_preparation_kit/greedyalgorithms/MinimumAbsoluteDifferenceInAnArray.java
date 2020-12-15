@@ -10,6 +10,9 @@ import java.util.regex.*;
 
 public class MinimumAbsoluteDifferenceInAnArray {
 
+    // Big O -> O(N log N)  for sorting + O(N)
+    // Drop-Non dominant term O(N)
+    // So the run-time is O(N log N)
     // Complete the minimumAbsoluteDifference function below.
     static int minimumAbsoluteDifference(int[] arr) {
 
@@ -26,6 +29,7 @@ public class MinimumAbsoluteDifferenceInAnArray {
         return minimumABS;
     }
 
+    // O(N^2) not a efficient
     // Complete the minimumAbsoluteDifference function below.
     static int minimumAbsoluteDifferenceBruteForce(int[] arr) {
 
