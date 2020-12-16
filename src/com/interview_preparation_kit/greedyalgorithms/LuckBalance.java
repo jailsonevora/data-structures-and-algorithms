@@ -1,6 +1,7 @@
 package com.interview_preparation_kit.greedyalgorithms;
 
 import java.io.*;
+import java.lang.reflect.Array;
 import java.math.*;
 import java.security.*;
 import java.text.*;
@@ -13,12 +14,24 @@ public class LuckBalance {
     // Complete the luckBalance function below.
     static int luckBalance(int k, int[][] contests) {
 
-        return 1;
+        int totalLuck = 0;
+        ArrayList<Integer> importantContest = new ArrayList<>();
+
+        for (int i = 0; i < contests.length; i++) {
+            totalLuck += contests[i][0];
+            if (contests[i][1] == 1)
+                importantContest.add(contests[i][0]);
+        }
+        Collections.sort(importantContest);
+        for (int i = 0; i < importantContest.size()-k; i++)
+            totalLuck -= (2 * importantContest.get(i));
+
+        return totalLuck;
     }
 
     public static void main(String[] args) throws IOException {
 
-        Scanner scanner = new Scanner(new File("src/com/sample_test_cases/luck_balance/input/input00.txt"));
+        Scanner scanner = new Scanner(new File("src/com/sample_test_cases/luck_balance/input/input12.txt"));
 
         BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
 
