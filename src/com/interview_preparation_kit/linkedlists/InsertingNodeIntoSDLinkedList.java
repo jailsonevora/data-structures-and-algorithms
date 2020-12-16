@@ -98,18 +98,16 @@ public class InsertingNodeIntoSDLinkedList {
 
                 temp.prev = current;
                 current.next = temp;
-                return head;
+                iteratedAllNode = true;
             }
-
             current = current.next;
         }
 
-        if(current.next == null  ) {
+        if(iteratedAllNode == false) {
             DoublyLinkedListNode temp = new DoublyLinkedListNode(data);
             current.next = temp;
             temp.next = null;
             temp.prev = current.next;
-            return head;
         }
         return head;
     }
