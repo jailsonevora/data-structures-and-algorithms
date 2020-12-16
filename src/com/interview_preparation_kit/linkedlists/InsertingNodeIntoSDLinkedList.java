@@ -71,12 +71,52 @@ public class InsertingNodeIntoSDLinkedList {
      */
     static DoublyLinkedListNode sortedInsert(DoublyLinkedListNode head, int data) {
 
-        return new DoublyLinkedListNode(data);
+        if (head == null)
+            return new DoublyLinkedListNode(data);
+
+        if (data < head.data) {
+            DoublyLinkedListNode temp = new DoublyLinkedListNode(data);
+
+            temp.next = head;
+            head.prev = temp;
+
+            temp.prev = null;
+            head = temp;
+            return head;
+        }
+
+        DoublyLinkedListNode current = head;
+        boolean iteratedAllNode = false;
+
+        while(current.next!=null){
+
+            if(current.data < data && current.next.data > data){
+
+                DoublyLinkedListNode temp = new DoublyLinkedListNode(data);
+                temp.next = current.next;
+                current.next.prev = temp;
+
+                temp.prev = current;
+                current.next = temp;
+                return head;
+            }
+
+            current = current.next;
+        }
+
+        if(current.next == null  ) {
+            DoublyLinkedListNode temp = new DoublyLinkedListNode(data);
+            current.next = temp;
+            temp.next = null;
+            temp.prev = current.next;
+            return head;
+        }
+        return head;
     }
 
     public static void main(String[] args) throws IOException {
 
-        Scanner scanner = new Scanner(new File("src/com/sample_test_cases/Inserting_Node_Into_Sorted_Doubly_Linked_List/input/input00.txt"));
+        Scanner scanner = new Scanner(new File("src/com/sample_test_cases/Inserting_Node_Into_Sorted_Doubly_Linked_List/input/input07.txt"));
 
         BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
 
