@@ -11,6 +11,8 @@ import java.util.regex.*;
 
 public class LuckBalance {
 
+    // Big O-> O(N log N + N)
+    // Drop - Non dominant term O(N) -> So we get O(N log N)
     // Complete the luckBalance function below.
     static int luckBalance(int k, int[][] contests) {
 
