@@ -69,7 +69,7 @@ public class InsertingNodeIntoSDLinkedList {
      * }
      *
      */
-    static DoublyLinkedListNode sortedInsert(DoublyLinkedListNode head, int data) {
+    static DoublyLinkedListNode sortedInsertReverseLookUp(DoublyLinkedListNode head, int data) {
 
         if (head == null)
             return new DoublyLinkedListNode(data);
@@ -107,24 +107,26 @@ public class InsertingNodeIntoSDLinkedList {
         return head;
     }
 
-    /*Node SortedInsert(Node head,int data) {
-        Node n = new Node();
-        n.data = data;
-        if (head == null) {
-            return n;
-        }
+    static DoublyLinkedListNode sortedInsertRecursive(DoublyLinkedListNode head, int data) {
+
+        if (head == null)
+            return new DoublyLinkedListNode(data);
+
         else if (data <= head.data) {
-            n.next = head;
-            head.prev = n;
-            return n;
+            DoublyLinkedListNode temp = new DoublyLinkedListNode(data);
+            temp.next = head;
+            head.prev = temp;
+            temp.prev = null;
+            head = temp;
+            return head;
         }
         else {
-            Node rest = SortedInsert(head.next, data);
+            DoublyLinkedListNode rest = sortedInsertRecursive(head.next, data);
             head.next = rest;
             rest.prev = head;
             return head;
         }
-    }*/
+    }
 
     public static void main(String[] args) throws IOException {
 
@@ -151,7 +153,7 @@ public class InsertingNodeIntoSDLinkedList {
             int data = scanner.nextInt();
             scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 
-            DoublyLinkedListNode llist1 = sortedInsert(llist.head, data);
+            DoublyLinkedListNode llist1 = sortedInsertRecursive(llist.head, data);
 
             printDoublyLinkedList(llist1, " ", bufferedWriter);
             bufferedWriter.newLine();
