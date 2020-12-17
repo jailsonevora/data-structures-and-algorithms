@@ -76,38 +76,33 @@ public class InsertingNodeIntoSDLinkedList {
 
         if (data < head.data) {
             DoublyLinkedListNode temp = new DoublyLinkedListNode(data);
-
             temp.next = head;
             head.prev = temp;
-
             temp.prev = null;
             head = temp;
             return head;
         }
 
         DoublyLinkedListNode current = head;
-        boolean iteratedAllNode = false;
 
-        while(current.next!=null){
+        while(current != null){
 
-            if(current.data < data && current.next.data > data){
-
+            if(current.data > data){
                 DoublyLinkedListNode temp = new DoublyLinkedListNode(data);
-                temp.next = current.next;
-                current.next.prev = temp;
-
-                temp.prev = current;
+                temp.next = current;
+                current.prev.next = temp;
+                current.prev = temp;
+                temp.prev = current.prev;
+                return head;
+            }
+            if(current.next == null) {
+                DoublyLinkedListNode temp = new DoublyLinkedListNode(data);
                 current.next = temp;
-                iteratedAllNode = true;
+                temp.next = null;
+                temp.prev = current;
+                return head;
             }
             current = current.next;
-        }
-
-        if(iteratedAllNode == false) {
-            DoublyLinkedListNode temp = new DoublyLinkedListNode(data);
-            current.next = temp;
-            temp.next = null;
-            temp.prev = current.next;
         }
         return head;
     }
