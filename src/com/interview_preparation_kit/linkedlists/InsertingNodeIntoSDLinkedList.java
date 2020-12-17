@@ -69,11 +69,16 @@ public class InsertingNodeIntoSDLinkedList {
      * }
      *
      */
+    // Big O -> O(N) for inserting
+    // O(1) for inserting at empty list
+    // O(1) at head
+    // O(N) at middle or end of the list
+    // So O(1+1+N)-> Drop Constant we get O(N)
     static DoublyLinkedListNode sortedInsertReverseLookUp(DoublyLinkedListNode head, int data) {
-
+        // Inserting with empty list
         if (head == null)
             return new DoublyLinkedListNode(data);
-
+        // Inserting at head
         if (data < head.data) {
             DoublyLinkedListNode temp = new DoublyLinkedListNode(data);
             temp.next = head;
@@ -84,9 +89,8 @@ public class InsertingNodeIntoSDLinkedList {
         }
 
         DoublyLinkedListNode current = head;
-
         while(current != null){
-
+            // Inserting at middle
             if(current.data > data){
                 DoublyLinkedListNode temp = new DoublyLinkedListNode(data);
                 temp.next = current;
@@ -95,6 +99,7 @@ public class InsertingNodeIntoSDLinkedList {
                 temp.prev = current.prev;
                 return head;
             }
+            // Inserting at end of the list
             if(current.next == null) {
                 DoublyLinkedListNode temp = new DoublyLinkedListNode(data);
                 current.next = temp;
@@ -106,12 +111,16 @@ public class InsertingNodeIntoSDLinkedList {
         }
         return head;
     }
-
+    // Big O -> O(N) for inserting
+    // O(1) for inserting at empty list
+    // O(1) at head
+    // O(N) at middle or end of the list
+    // So O(1+1+N)-> Drop Constant we get O(N)
     static DoublyLinkedListNode sortedInsertRecursive(DoublyLinkedListNode head, int data) {
-
+        // Inserting with empty list
         if (head == null)
             return new DoublyLinkedListNode(data);
-
+        // Inserting at head
         else if (data <= head.data) {
             DoublyLinkedListNode temp = new DoublyLinkedListNode(data);
             temp.next = head;
@@ -121,6 +130,7 @@ public class InsertingNodeIntoSDLinkedList {
             return head;
         }
         else {
+            // Inserting at middle or end of the list
             DoublyLinkedListNode rest = sortedInsertRecursive(head.next, data);
             head.next = rest;
             rest.prev = head;
