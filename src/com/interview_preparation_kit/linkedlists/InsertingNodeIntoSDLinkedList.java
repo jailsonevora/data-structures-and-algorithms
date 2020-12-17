@@ -107,6 +107,25 @@ public class InsertingNodeIntoSDLinkedList {
         return head;
     }
 
+    /*Node SortedInsert(Node head,int data) {
+        Node n = new Node();
+        n.data = data;
+        if (head == null) {
+            return n;
+        }
+        else if (data <= head.data) {
+            n.next = head;
+            head.prev = n;
+            return n;
+        }
+        else {
+            Node rest = SortedInsert(head.next, data);
+            head.next = rest;
+            rest.prev = head;
+            return head;
+        }
+    }*/
+
     public static void main(String[] args) throws IOException {
 
         Scanner scanner = new Scanner(new File("src/com/sample_test_cases/Inserting_Node_Into_Sorted_Doubly_Linked_List/input/input07.txt"));
