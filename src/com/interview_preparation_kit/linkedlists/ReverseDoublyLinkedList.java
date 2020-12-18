@@ -71,7 +71,18 @@ public class ReverseDoublyLinkedList {
      */
     static DoublyLinkedListNode reverse(DoublyLinkedListNode head) {
 
-        return new DoublyLinkedListNode(1);
+        DoublyLinkedListNode current = head;
+        DoublyLinkedListNode temp = head;
+
+        while(current != null){
+
+            DoublyLinkedListNode prev = current.prev;
+            current.prev = current.next;
+            current.next = prev;
+            temp = current;
+            current = current.prev;
+        }
+        return temp;
     }
 
     public static void main(String[] args) throws IOException {
