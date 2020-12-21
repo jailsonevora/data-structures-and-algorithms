@@ -99,6 +99,19 @@ public class FindMergePointofTwoLists {
         return head2.data;
     }
 
+    static int findMergeNodeBruteForce(SinglyLinkedListNode head1, SinglyLinkedListNode head2) {
+
+        SinglyLinkedListNode h1 = head1;
+        SinglyLinkedListNode h2 = head2;
+
+        while(h1 != null){
+            while (h2 != null)
+                if (h1.next.data == h2.next.data)
+                    return h1.next.data;
+        }
+        return 0;
+    }
+
     public static void main(String[] args) throws IOException {
 
         Scanner scanner = new Scanner(new File("src/com/sample_test_cases/find_merge_point_of_two_lists/input/input01.txt"));
