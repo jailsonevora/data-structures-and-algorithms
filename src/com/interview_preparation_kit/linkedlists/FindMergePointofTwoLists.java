@@ -74,15 +74,17 @@ public class FindMergePointofTwoLists {
 
         while (h1 != h2) {
             if (h1.next == null)
-                h1 = head2;
+                h1 = head2; // we can also change it to h1 = head1;
             else
                 h1 = h1.next;
 
             if (h2.next == null)
-                h2 = head1;
+                h2 = head1; // we can also change it to h2 = head2;
             else
                 h2 = h2.next;
         }
+        // we exit the while loop with reference of the h1 = h2
+        // so we return the data of this pointer
         return h1.data;
     }
 
