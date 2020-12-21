@@ -66,6 +66,7 @@ public class FindMergePointofTwoLists {
      *
      */
 
+    // Big O-> O(N) or for a more precise analysis O( (H1+H2) - (H1∩H2) )
     static int findMergeNode(SinglyLinkedListNode head1, SinglyLinkedListNode head2) {
 
         SinglyLinkedListNode h1 = head1;
