@@ -69,6 +69,7 @@ public class ReverseDoublyLinkedList {
      * }
      *
      */
+    // Big O -> O(N)
     static DoublyLinkedListNode reverseImp(DoublyLinkedListNode head) {
 
         DoublyLinkedListNode current = head;
@@ -85,13 +86,13 @@ public class ReverseDoublyLinkedList {
         return temp;
     }
 
+    // Big O -> O(N)
     static DoublyLinkedListNode reverse(DoublyLinkedListNode head) {
 
         DoublyLinkedListNode current = head.next;
         head.next = head.prev;
         head.prev = current;
         return current == null ? head : reverse(current);
-
     }
 
 
