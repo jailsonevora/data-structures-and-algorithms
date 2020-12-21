@@ -65,13 +65,29 @@ public class FindMergePointofTwoLists {
      * }
      *
      */
+
     static int findMergeNode(SinglyLinkedListNode head1, SinglyLinkedListNode head2) {
-        return 1;
+
+        SinglyLinkedListNode h1 = head1;
+        SinglyLinkedListNode h2 = head2;
+
+        while (h1 != h2) {
+            if (h1.next == null)
+                h1 = head2;
+            else
+                h1 = h1.next;
+
+            if (h2.next == null)
+                h2 = head1;
+            else
+                h2 = h2.next;
+        }
+        return h1.data;
     }
 
     public static void main(String[] args) throws IOException {
 
-        Scanner scanner = new Scanner(new File("src/com/sample_test_cases/find_merge_point_of_two_lists/input/input00.txt"));
+        Scanner scanner = new Scanner(new File("src/com/sample_test_cases/find_merge_point_of_two_lists/input/input01.txt"));
 
         BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
 
