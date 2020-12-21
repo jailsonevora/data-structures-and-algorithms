@@ -101,6 +101,7 @@ public class FindMergePointofTwoLists {
         return head2.data;
     }
 
+    // Big O-> O(N^2) not efficient solution for big data set
     static int findMergeNodeBruteForce(SinglyLinkedListNode head1, SinglyLinkedListNode head2) {
 
         SinglyLinkedListNode h1 = head1;
