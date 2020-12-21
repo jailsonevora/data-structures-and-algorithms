@@ -85,6 +85,20 @@ public class FindMergePointofTwoLists {
         return h1.data;
     }
 
+    static int findMergeNode2N(SinglyLinkedListNode head1, SinglyLinkedListNode head2) {
+
+        while(head1 != null){
+            SinglyLinkedListNode current = head1.next;
+            head1.next = null;
+            head1 = current;
+        }
+
+        while (head2.next != null)
+            head2 = head2.next;
+
+        return head2.data;
+    }
+
     public static void main(String[] args) throws IOException {
 
         Scanner scanner = new Scanner(new File("src/com/sample_test_cases/find_merge_point_of_two_lists/input/input01.txt"));
