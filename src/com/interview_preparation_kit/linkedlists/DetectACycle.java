@@ -30,6 +30,7 @@ public class DetectACycle {
         return false;
     }
 
+    // Big O analysis -> O(N)
     boolean hasCycleWithTwoPointers(SinglyLinkedListNode head) {
 
         if (head == null) return false;
