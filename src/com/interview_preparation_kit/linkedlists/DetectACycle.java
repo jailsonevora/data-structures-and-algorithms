@@ -14,7 +14,7 @@ public class DetectACycle {
             Node next;
         }
     */
-
+    // Big O analysis -> O(N)
     boolean hasCycle(SinglyLinkedListNode head) {
         SinglyLinkedListNode current = head;
         HashSet<SinglyLinkedListNode> hsp = new HashSet<>();
