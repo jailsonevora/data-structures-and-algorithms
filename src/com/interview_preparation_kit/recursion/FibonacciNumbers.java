@@ -6,6 +6,10 @@ import java.util.*;
 
 public class FibonacciNumbers {
 
+    /*Big O analysis -> O(2^N)
+    * each node has 2 nodes
+    * if we do this n times
+    * we will have 2^N nodes*/
     public static int fibonacci(int n) {
         if(n == 0 || n == 1)
             return n;
@@ -13,10 +17,12 @@ public class FibonacciNumbers {
             return fibonacci(n - 1) + fibonacci(n - 2);
     }
 
+    /*Big O analysis - > O(N) with memoization*/
     public static int fibonacciWithMemoization(int n, int memo[]) {
         return fibonacci(n, new int[n + 1]);
     }
 
+    /*Big O analysis - > O(N) with memoization*/
     public static int fibonacci(int n, int memo[]){
         if(n == 0 || n == 1)
             return n;
