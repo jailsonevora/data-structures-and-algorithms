@@ -17,12 +17,16 @@ public class FibonacciNumbers {
             return fibonacci(n - 1) + fibonacci(n - 2);
     }
 
-    /*Big O analysis - > O(N) with memoization*/
+    /*Big O analysis - > O(N) with memoization
+    * since there's onlyO(n) possible values we can throw at fib,
+    * we cache the result each time we compute the fib*/
     public static int fibonacciWithMemoization(int n, int memo[]) {
         return fibonacci(n, new int[n + 1]);
     }
 
-    /*Big O analysis - > O(N) with memoization*/
+    /*Big O analysis - > O(N) with memoization
+     * since there's onlyO(n) possible values we can throw at fib,
+     * we cache the result each time we compute the fib*/
     public static int fibonacci(int n, int memo[]){
         if(n == 0 || n == 1)
             return n;
