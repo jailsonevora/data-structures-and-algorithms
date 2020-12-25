@@ -10,7 +10,19 @@ public class FibonacciNumbers {
         if(n == 0 || n == 1)
             return n;
         else
-            return fibonacci(n-1) + fibonacci(n-2);
+            return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+
+    public static int fibonacciWithMemoization(int n, int memo[]) {
+        return fibonacci(n, new int[n + 1]);
+    }
+
+    public static int fibonacci(int n, int memo[]){
+        if(n == 0 || n == 1)
+            return n;
+        if (memo[n] == 0)
+            return fibonacciWithMemoization(n - 1, memo) + fibonacciWithMemoization(n - 2, memo);
+        return n;
     }
 
 
@@ -18,6 +30,7 @@ public class FibonacciNumbers {
         Scanner scanner = new Scanner(new File("src/com/sample_test_cases/fibonacci_numbers/input/input06.txt"));
         int n = scanner.nextInt();
         scanner.close();
-        System.out.println(fibonacci(n));
+        System.out.println(fibonacciWithMemoization(n, new int[n]));
+        //System.out.println(fibonacci(n));
     }
 }
