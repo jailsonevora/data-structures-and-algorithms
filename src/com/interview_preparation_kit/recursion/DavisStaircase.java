@@ -34,6 +34,20 @@ public class DavisStaircase {
         return memo.get(n);
     }
 
+    static int stepPermsWithItr(int n) {
+        int[] memo = new int[n];
+
+        if(n == 1 || n==2)
+            return n;
+        if(n == 3)
+            return 4;
+        memo[0] = 1; memo[1] = 2; memo[2] = 4;
+        for (int i = 3; i < memo.length; i++)
+            memo[i] = memo[i - 1] + memo[i - 2] + memo[i - 3];
+        return memo[memo.length - 1];
+    }
+
+
 
 
     public static void main(String[] args) throws IOException {
