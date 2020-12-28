@@ -20,6 +20,20 @@ public class DavisStaircase {
             return stepPerms(n - 1)+stepPerms(n - 2)+stepPerms(n - 3);
     }
 
+    static int stepPermsWithMemoization(int n, HashSet<Integer> memo) {
+        return stepPerms(n - 1)+stepPerms(n - 2)+stepPerms(n - 3);
+    }
+
+    static int stepPerms(int n, HashMap<Integer, Integer> memo) {
+        if(n == 1 || n==2)
+            return n;
+        if(n == 3)
+            return 4;
+        if(!memo.containsKey(n))
+            memo.put(n,stepPerms(n - 1, memo)+stepPerms(n - 2, memo)+stepPerms(n - 3, memo));
+        return memo.get(n);
+    }
+
 
 
     public static void main(String[] args) throws IOException {
