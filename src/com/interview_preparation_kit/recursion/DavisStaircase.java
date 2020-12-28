@@ -47,7 +47,7 @@ public class DavisStaircase {
         return memo[n];
     }
 
-    // Big O - > O(N)
+    // Big O - > O(N) with FOR LOOP
     static int stepPermsWithItr(int n) {
         int[] memo = new int[n];
 
