@@ -33,7 +33,7 @@ public class DavisStaircase {
             memo.put(n,stepPerms(n - 1, memo)+stepPerms(n - 2, memo)+stepPerms(n - 3, memo));
         return memo.get(n);
     }
-
+    // Big O - > O(N)
     static int stepPermsWithItr(int n) {
         int[] memo = new int[n];
 
