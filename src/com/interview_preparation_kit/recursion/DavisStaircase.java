@@ -24,6 +24,9 @@ public class DavisStaircase {
         return stepPerms(n - 1)+stepPerms(n - 2)+stepPerms(n - 3);
     }
 
+    // Big O - > O(N) with memoization
+    //    * since there's onlyO(n) possible values we can throw at fib,
+    //    * we cache the result each time we compute the fib*/
     static int stepPerms(int n, HashMap<Integer, Integer> memo) {
         if(n == 1 || n==2)
             return n;
