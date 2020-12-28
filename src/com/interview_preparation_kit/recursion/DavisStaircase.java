@@ -10,7 +10,7 @@ import java.util.regex.*;
 
 public class DavisStaircase {
 
-    /*Big O analysis -> O(3^N)*/
+    /*Big O analysis -> O(3^N) RECURSION ONLY */
     // Complete the stepPerms function below.
     static int stepPerms(int n) {
         if(n == 1 || n==2)
@@ -21,11 +21,7 @@ public class DavisStaircase {
             return stepPerms(n - 1)+stepPerms(n - 2)+stepPerms(n - 3);
     }
 
-    static int stepPermsWithMemoization(int n, HashSet<Integer> memo) {
-        return stepPerms(n - 1)+stepPerms(n - 2)+stepPerms(n - 3);
-    }
-
-    // Big O - > O(N) with memoization
+    // Big O - > O(N) with memoization and HASH
     //    * since there's onlyO(n) possible values we can throw at fib,
     //    * we cache the result each time we compute the fib*/
     static int stepPerms(int n, HashMap<Integer, Integer> memo) {
@@ -37,6 +33,20 @@ public class DavisStaircase {
             memo.put(n,stepPerms(n - 1, memo)+stepPerms(n - 2, memo)+stepPerms(n - 3, memo));
         return memo.get(n);
     }
+
+    // Big O - > O(N) with memoization and ARRAY
+    //    * since there's onlyO(n) possible values we can throw at fib,
+    //    * we cache the result each time we compute the fib*/
+    static int stepPerms(int n, int[] memo) {
+        if(n == 1 || n==2)
+            return n;
+        if(n == 3)
+            return 4;
+        if(memo[n] == 0)
+            memo[n] = stepPerms(n - 1, memo)+stepPerms(n - 2, memo)+stepPerms(n - 3, memo);
+        return memo[n];
+    }
+
     // Big O - > O(N)
     static int stepPermsWithItr(int n) {
         int[] memo = new int[n];
@@ -50,9 +60,6 @@ public class DavisStaircase {
             memo[i] = memo[i - 1] + memo[i - 2] + memo[i - 3];
         return memo[memo.length - 1];
     }
-
-
-
 
     public static void main(String[] args) throws IOException {
 
@@ -69,6 +76,7 @@ public class DavisStaircase {
 
             int res = stepPerms(n);
             // int res = stepPerms(n, new HashMap<>());
+            // int res = stepPerms(n, new int[n + 1]);
 
 
             bufferedWriter.write(String.valueOf(res));
