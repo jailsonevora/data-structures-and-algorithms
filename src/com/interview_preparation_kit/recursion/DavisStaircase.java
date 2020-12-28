@@ -10,6 +10,7 @@ import java.util.regex.*;
 
 public class DavisStaircase {
 
+    /*Big O analysis -> O(3^N)*/
     // Complete the stepPerms function below.
     static int stepPerms(int n) {
         if(n == 1 || n==2)
