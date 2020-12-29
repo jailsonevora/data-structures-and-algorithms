@@ -63,7 +63,7 @@ public class DavisStaircase {
 
     public static void main(String[] args) throws IOException {
 
-        Scanner scanner = new Scanner(new File(""));
+        Scanner scanner = new Scanner(new File("src/com/sample_test_cases/recursive_staircase/input/input00.txt"));
 
         BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
 
