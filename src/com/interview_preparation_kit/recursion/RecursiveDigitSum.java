@@ -12,12 +12,30 @@ public class RecursiveDigitSum {
 
     // Complete the superDigit function below.
     static int superDigit(String n, int k) {
-        return 0;
+
+        StringBuilder p = new StringBuilder();
+        for (int i = 0; i < k % 9; i++) {
+            p.append(n);
+        }
+        return superDigit(p);
+    }
+
+    static int superDigit(StringBuilder p) {
+
+        if( p.length() == 1 )
+            return Integer.parseInt(p.toString());
+        else {
+            Integer superDigitSum = 0;
+            for (int i = 0; i < p.length(); i++) {
+                superDigitSum += Integer.parseInt(p.substring(i,i+1));
+            }
+            return superDigit(new StringBuilder(superDigitSum.toString()));
+        }
     }
 
     public static void main(String[] args) throws IOException {
 
-        Scanner scanner = new Scanner(new File("src/com/sample_test_cases/recursive_digit_sum/input/input00.txt"));
+        Scanner scanner = new Scanner(new File("src/com/sample_test_cases/recursive_digit_sum/input/input11.txt"));
 
         BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
 
