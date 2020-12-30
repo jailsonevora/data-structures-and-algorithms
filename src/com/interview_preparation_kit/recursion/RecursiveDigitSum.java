@@ -12,14 +12,14 @@ public class RecursiveDigitSum {
 
     // Complete the superDigit function below.
     static int superDigit(String n, int k) {
-
         return 0;
     }
 
-    private static final Scanner scanner = new Scanner(System.in);
-
     public static void main(String[] args) throws IOException {
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
+        Scanner scanner = new Scanner(new File("src/com/sample_test_cases/recursive_digit_sum/input/input00.txt"));
+
+        BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
 
         String[] nk = scanner.nextLine().split(" ");
 
