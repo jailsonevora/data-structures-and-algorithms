@@ -10,25 +10,30 @@ import java.util.regex.*;
 
 public class RecursiveDigitSum {
 
-    /*Big O -> O(N*K)*/
-    /*Where O(K) to create the p String + O(N*K) for sum the super digit
-    * Since we know that always N*K is large than K, we drop non dominant term
+    /*Big O -> O(N*K)
+    Where O(K) to create the p String + O(N*K) for the super digit sum
+    * Since we know that always N*K is large than K, we drop non-dominant term
     * and the run-time is O(N*K)*/
     static int superDigit(String n, int k) {
-
+        // O(K)
         StringBuilder p = new StringBuilder();
         for (int i = 0; i < k % 9; i++) {
             p.append(n);
         }
+        // O(N*K)
         return superDigit(p);
     }
-
+    /*Big O -> O(N*K)
+    Where O(K) to create the p String + O(N*K) for the super digit sum
+     * Since we know that always N*K is large than K, we drop non-dominant term
+     * and the run-time is O(N*K)*/
     static int superDigit(StringBuilder p) {
 
         if( p.length() == 1 )
             return Integer.parseInt(p.toString());
         else {
             Integer superDigitSum = 0;
+            // O(N*K)
             for (int i = 0; i < p.length(); i++) {
                 superDigitSum += Integer.parseInt(p.substring(i,i+1));
             }
