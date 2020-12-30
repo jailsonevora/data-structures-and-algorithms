@@ -10,7 +10,10 @@ import java.util.regex.*;
 
 public class RecursiveDigitSum {
 
-    // Complete the superDigit function below.
+    /*Big O -> O(N*K)*/
+    /*Where O(K) to create the p String + O(N*K) for sum the super digit
+    * Since we know that always N*K is large than K, we drop non dominant term
+    * and the run-time is O(N*K)*/
     static int superDigit(String n, int k) {
 
         StringBuilder p = new StringBuilder();
