@@ -15,13 +15,13 @@ import static java.util.stream.Collectors.toList;
 public class CountTriplets {
     // Complete the countTriplets function below.
     static long countTriplets(List<Long> arr, long r) {
-
-
+        return 1;
     }
 
     public static void main(String[] args) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
+        BufferedReader bufferedReader = new BufferedReader(new FileReader("src/com/sample_test_cases/count_triplets_1/input/input00.txt"));
+        BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
 
         String[] nr = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");
 
