@@ -13,9 +13,35 @@ import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
 public class CountTriplets {
+
     // Complete the countTriplets function below.
     static long countTriplets(List<Long> arr, long r) {
-        return 1;
+        HashMap<Long, Long> left = new HashMap<>();
+        HashMap<Long, Long> right = new HashMap<>();
+
+        long count = 0;
+
+        for(long listItem : arr)
+            right.put(listItem, right.getOrDefault(listItem, 0L) + 1);
+
+        for (int i = 0; i < arr.size(); i++) {
+
+            long mid = arr.get(i);
+            long leftMidDivision = 0, rightMidMultiply = 0;
+
+            right.put(mid, right.getOrDefault(mid, 0L) - 1);
+
+            if(left.containsKey(mid / r) && mid % r == 0)
+                leftMidDivision = left.get(mid / r);
+
+            if(right.containsKey(mid * r))
+                rightMidMultiply = right.get(mid * r);
+
+            count += leftMidDivision * rightMidMultiply;
+
+            left.put(mid, left.getOrDefault(mid, 0L) + 1);
+        }
+        return count;
     }
 
     public static void main(String[] args) throws IOException {
