@@ -22,10 +22,11 @@ public class CountTriplets {
         HashMap<Long, Long> right = new HashMap<>();
 
         long count = 0;
-
+        // O(N)
         for(long listItem : arr)
             right.put(listItem, right.getOrDefault(listItem, 0L) + 1);
 
+        // O(N)
         for (int i = 0; i < arr.size(); i++) {
 
             long mid = arr.get(i);
