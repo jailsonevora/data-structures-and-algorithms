@@ -17,8 +17,10 @@ public class MaximumElement {
         int queries = scanner.nextInt();
         Stack<Integer> stack = new Stack<Integer>();
 
+        // O(N) for each query
         while (queries-- > 0) {
             switch(scanner.nextInt()){
+                // O(1) for adding new element to stack
                 case 1:{
                     int item = scanner.nextInt();
                     if(!stack.isEmpty())
