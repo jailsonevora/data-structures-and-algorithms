@@ -34,6 +34,7 @@ public class MaximumElement {
                         stack.pop();
                     break;
                 }
+                // O(1) for printing element from stack
                 case 3:{
                     if(!stack.isEmpty())
                         System.out.println(stack.peek());
