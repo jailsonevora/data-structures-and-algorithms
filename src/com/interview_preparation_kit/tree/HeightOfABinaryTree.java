@@ -29,6 +29,20 @@ public class HeightOfABinaryTree {
         return count;
     }
 
+    public static int heightWithTwoCount(Node root) {
+        // Write your code here.
+        int left = 0, right = 0;
+
+        if (root.left != null)
+            left = 1 + height(root.left);
+
+        if (root.right != null)
+            right = 1 + height(root.right);
+
+        return left > right ? left : right;
+    }
+
+
     public static Node insert(Node root, int data) {
         if(root == null) {
             return new Node(data);
