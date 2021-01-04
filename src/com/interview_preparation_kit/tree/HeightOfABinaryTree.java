@@ -18,7 +18,6 @@ class Node {
 public class HeightOfABinaryTree {
 
     public static int height(Node root) {
-        // Write your code here.
         int count = 0;
 
         if (root.left != null)
@@ -30,7 +29,6 @@ public class HeightOfABinaryTree {
     }
 
     public static int heightWithTwoCount(Node root) {
-        // Write your code here.
         int left = 0, right = 0;
 
         if (root.left != null)
@@ -40,6 +38,13 @@ public class HeightOfABinaryTree {
             right = 1 + height(root.right);
 
         return left > right ? left : right;
+    }
+
+    public static int heightWithMathMax(Node root) {
+        if (root == null)
+            return -1;
+        else
+            return 1 + Math.max( height(root.left), height(root.right) );
     }
 
 
