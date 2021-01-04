@@ -5,6 +5,10 @@ import java.util.*;
 
 public class MaximumElement {
 
+    /*O(N)
+    O(1) delete
+    O(1) push
+    O(1) peek*/
     public static void main(String[] args) throws IOException {
         /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
 
