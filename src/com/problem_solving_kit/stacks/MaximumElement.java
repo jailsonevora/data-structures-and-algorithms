@@ -28,6 +28,7 @@ public class MaximumElement {
                     stack.push(item);
                     break;
                 }
+                // O(1) for deleting element from stack
                 case 2:{
                     if(!stack.isEmpty())
                         stack.pop();
