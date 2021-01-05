@@ -18,6 +18,7 @@ class Node {
 public class HeightOfABinaryTree {
 
     // O(n - n-1) with recursion
+    //
     public static int height(Node root) {
         int count = 0;
 
@@ -29,6 +30,7 @@ public class HeightOfABinaryTree {
         return count;
     }
 
+    // O(n - n-1) with recursion and two count
     public static int heightWithTwoCount(Node root) {
         int left = 0, right = 0;
 
