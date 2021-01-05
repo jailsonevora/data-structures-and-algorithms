@@ -74,7 +74,6 @@ public class HeightOfABinaryTree {
             return 1 + Math.max( height(root.left), height(root.right) );
     }
 
-
     public static Node insert(Node root, int data) {
         if(root == null) {
             return new Node(data);
@@ -91,6 +90,14 @@ public class HeightOfABinaryTree {
         }
     }
 
+    public static void printInOrder(Node root) {
+        if (root.left != null)
+            printInOrder(root.left);
+        System.out.print(root.data +" ");
+        if (root.right != null)
+            printInOrder(root.right);
+    }
+
     public static void main(String[] args) throws  IOException{
         Scanner scan = new Scanner(new File("src/com/ip_kit_sample_test_cases/tree_height_of_a_binary_tree/input/input00.txt"));
         int t = scan.nextInt();
@@ -100,7 +107,9 @@ public class HeightOfABinaryTree {
             root = insert(root, data);
         }
         scan.close();
-        int height = height(root);
-        System.out.println(height);
+        //int height = heightPostOrder(root);
+        //System.out.println(height);
+
+        System.out.println("In-Oder traversal binary tree "); printInOrder(root);
     }
 }
