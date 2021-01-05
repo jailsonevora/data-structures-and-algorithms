@@ -38,6 +38,14 @@ public class HeightOfABinaryTree {
     }
 
     // O(n - n-1) with recursion and two count
+    // In-Oder traversals
+    // For Graph the runtime is O(n + m)
+    // where n is the number of nodes and
+    // m is the number of edge
+    // since Binary Tree is also a graph, the complexity is also
+    // O(n + m)
+    // the number of edges from a node in BST is 2, the maximum number of edges is n-1, so the complexity is O(n + n-1)
+    // Drop Non-Dominant Term n-1 and the final runtime is O(n)
     public static int heightWithTwoCount(Node root) {
         int left = 0, right = 0;
 
@@ -51,6 +59,14 @@ public class HeightOfABinaryTree {
     }
 
     // O(n - n-1) with recursion library
+    // In-Oder traversals
+    // For Graph the runtime is O(n + m)
+    // where n is the number of nodes and
+    // m is the number of edge
+    // since Binary Tree is also a graph, the complexity is also
+    // O(n + m)
+    // the number of edges from a node in BST is 2, the maximum number of edges is n-1, so the complexity is O(n + n-1)
+    // Drop Non-Dominant Term n-1 and the final runtime is O(n)
     public static int heightWithMathMax(Node root) {
         if (root == null)
             return -1;
