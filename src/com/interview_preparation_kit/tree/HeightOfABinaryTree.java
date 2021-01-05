@@ -25,6 +25,7 @@ public class HeightOfABinaryTree {
     // since Binary Tree is also a graph, the complexity is also
     // O(n + m)
     // the number of edges from a node in BST is 2, the maximum number of edges is n-1, so the complexity is O(n + n-1)
+    // Drop Non-Dominant Term n-1 and the final runtime is O(n)
     public static int height(Node root) {
         int count = 0;
 
