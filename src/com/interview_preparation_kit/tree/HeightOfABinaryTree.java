@@ -43,6 +43,7 @@ public class HeightOfABinaryTree {
         return left > right ? left : right;
     }
 
+    // O(n - n-1) with recursion library
     public static int heightWithMathMax(Node root) {
         if (root == null)
             return -1;
