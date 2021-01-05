@@ -18,7 +18,12 @@ class Node {
 public class HeightOfABinaryTree {
 
     // O(n - n-1) with recursion
-    //
+    // In-Oder traversals
+    // For Graph the runtime is O(n + m)
+    // where n is the number of nodes and
+    // m is the number of edge
+    // since Binary Tree is also a graph, the complexity is also
+    // O(n + m)
     public static int height(Node root) {
         int count = 0;
 
