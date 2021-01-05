@@ -17,7 +17,7 @@ class Node {
 
 public class HeightOfABinaryTree {
 
-    // O(n - n-1) with recursion
+    // O(n + n-1) with recursion
     // In-Oder traversals
     // For Graph the runtime is O(n + m)
     // where n is the number of nodes and
@@ -37,7 +37,7 @@ public class HeightOfABinaryTree {
         return count;
     }
 
-    // O(n - n-1) with recursion and two count
+    // O(n + n-1) with recursion and two count
     // In-Oder traversals
     // For Graph the runtime is O(n + m)
     // where n is the number of nodes and
@@ -58,7 +58,7 @@ public class HeightOfABinaryTree {
         return left > right ? left : right;
     }
 
-    // O(n - n-1) with recursion library
+    // O(n + n-1) with recursion library
     // In-Oder traversals
     // For Graph the runtime is O(n + m)
     // where n is the number of nodes and
