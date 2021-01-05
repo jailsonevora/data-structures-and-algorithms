@@ -123,8 +123,8 @@ public class HeightOfABinaryTree {
             root = insert(root, data);
         }
         scan.close();
-        //int height = heightPostOrder(root);
-        //System.out.println(height);
+        // int height = heightPostOrder(root);
+        // System.out.println(height);
 
         System.out.println("In-Oder traversal binary tree "); printInOrder(root);
         System.out.println("\nPre-Oder traversal binary tree "); printPreOrder(root);
