@@ -106,6 +106,14 @@ public class HeightOfABinaryTree {
             printPreOrder(root.right);
     }
 
+    public static void printPostOrder(Node root) {
+        if (root.left != null)
+            printPostOrder(root.left);
+        if (root.right != null)
+            printPostOrder(root.right);
+        System.out.print(root.data +" ");
+    }
+
     public static void main(String[] args) throws  IOException{
         Scanner scan = new Scanner(new File("src/com/ip_kit_sample_test_cases/tree_height_of_a_binary_tree/input/input00.txt"));
         int t = scan.nextInt();
@@ -120,5 +128,6 @@ public class HeightOfABinaryTree {
 
         System.out.println("In-Oder traversal binary tree "); printInOrder(root);
         System.out.println("\nPre-Oder traversal binary tree "); printPreOrder(root);
+        System.out.println("\nPost-Oder traversal binary tree "); printPostOrder(root);
     }
 }
