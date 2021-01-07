@@ -6,8 +6,7 @@ import java.io.*;
 public class LowestCommonAncestor {
 
     public static Node lca(Node root, int v1, int v2) {
-        // Write your code here.
-        return new Node(1);
+        return null;
     }
 
     public static Node insert(Node root, int data) {
