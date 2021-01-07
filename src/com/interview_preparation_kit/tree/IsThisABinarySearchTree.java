@@ -11,6 +11,15 @@ public class IsThisABinarySearchTree {
             Node right;
          }
     */
+    // O(n + n-1) with recursion
+    // In-Oder traversals
+    // For Graph the runtime is O(n + m)
+    // where n is the number of nodes and
+    // m is the number of edge
+    // since Binary Tree is also a graph, the complexity is also
+    // O(n + m)
+    // the number of edges from a node in BST is 2, the maximum number of edges is n-1, so the complexity is O(n + n-1)
+    // Drop Non-Dominant Term n-1 and the final runtime is O(n)
     boolean checkBST(Node root) {
         return checkBST(root, Integer.MIN_VALUE,Integer.MAX_VALUE);
     }
