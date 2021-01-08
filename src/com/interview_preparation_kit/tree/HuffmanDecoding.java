@@ -36,4 +36,8 @@ class HuffmanNode extends Node1 {
 }
 
 public class HuffmanDecoding {
+
+    void decode(String s, Node root) {
+
+    }
 }
