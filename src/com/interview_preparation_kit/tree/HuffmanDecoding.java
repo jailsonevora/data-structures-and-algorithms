@@ -35,9 +35,24 @@ class HuffmanNode extends Node1 {
 
 }
 
-public class HuffmanDecoding {
+class Decoding {
+
+/*
+	class Node
+		public  int frequency; // the frequency of this tree
+    	public  char data;
+    	public  Node left, right;
+
+*/
 
     void decode(String s, Node root) {
-
     }
+
+
+
+}
+
+public class HuffmanDecoding {
+
+
 }
