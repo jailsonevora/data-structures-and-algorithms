@@ -1,5 +1,7 @@
 package com.interview_preparation_kit.tree;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.*;
 
 abstract class Node1 implements Comparable<Node1> {
@@ -107,8 +109,8 @@ public class HuffmanDecoding {
         }
     }
 
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
+        Scanner input = new Scanner(new File("src/com/ip_kit_sample_test_cases/tree_huffman_decoding/input/input02.txt"));
 
         String test= input.next();
 
