@@ -56,8 +56,8 @@ public class IceCreamParlor {
 
         for (int i = 0; i < cost.length; i++) {
             int siblingIndex = Arrays.binarySearch(cost, money - cost[i]);
-            //int siblingIndex = com.searching.BinarySearch.binarySearch(cost, money - cost[i]);
-            //int siblingIndex = com.searching.BinarySearch.binarySearchRecursive(cost, money - cost[i], 0, cost.length-1);
+            //int siblingIndex = com.StateOfTheArt.searching.BinarySearch.binarySearch(cost, money - cost[i]);
+            //int siblingIndex = com.StateOfTheArt.searching.BinarySearch.binarySearchRecursive(cost, money - cost[i], 0, cost.length-1);
             if (siblingIndex >= 0) { // Found it!
                 // If this points at us, then the pair exists only if
                 // there is another copy of the element. Look ahead of

@@ -1,4 +1,4 @@
-package com.searching;
+package com.StateOfTheArt.searching;
 
 public class BinarySearch {
 
