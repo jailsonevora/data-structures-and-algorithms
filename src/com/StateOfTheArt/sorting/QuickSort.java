@@ -1,4 +1,4 @@
-package com.sorting;
+package com.StateOfTheArt.sorting;
 
 public class QuickSort {
 
