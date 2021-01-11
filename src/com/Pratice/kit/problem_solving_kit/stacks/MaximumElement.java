@@ -1,4 +1,4 @@
-package com.Pratice.problem_solving_kit.stacks;
+package com.Pratice.kit.problem_solving_kit.stacks;
 
 import java.io.*;
 import java.util.*;
