@@ -1,5 +1,6 @@
 package com.Pratice.kit.interview_preparation.graphs;
 
+import javax.swing.*;
 import java.io.*;
 import java.math.*;
 import java.security.*;
@@ -16,9 +17,9 @@ public class RoadsAndLibraries {
         return 0;
     }
 
-    private static final Scanner scanner = new Scanner(System.in);
-
     public static void main(String[] args) throws IOException {
+
+        Scanner scanner = new Scanner(new File("src/com/Pratice/sample_test_cases/interview_preparation/roads_and_libraries/input/input00.txt"));
 
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 
