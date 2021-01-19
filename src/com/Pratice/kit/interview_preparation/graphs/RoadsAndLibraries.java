@@ -13,8 +13,7 @@ public class RoadsAndLibraries {
 
     // Complete the roadsAndLibraries function below.
     static long roadsAndLibraries(int n, int c_lib, int c_road, int[][] cities) {
-
-        return 0;
+        return 000;
     }
 
     public static void main(String[] args) throws IOException {
