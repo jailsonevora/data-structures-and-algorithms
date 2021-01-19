@@ -21,7 +21,7 @@ public class RoadsAndLibraries {
 
         Scanner scanner = new Scanner(new File("src/com/Pratice/sample_test_cases/interview_preparation/roads_and_libraries/input/input00.txt"));
 
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+        BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
 
         int q = scanner.nextInt();
         scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
