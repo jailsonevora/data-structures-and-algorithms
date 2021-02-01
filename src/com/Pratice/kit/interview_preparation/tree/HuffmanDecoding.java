@@ -48,10 +48,19 @@ class Decoding {
 */
 
     void decode(String s, Node1 root) {
+
+        StringBuilder sb = new StringBuilder();
+        Node1 tempRoot = root;
+
+        for (int i = 0; i < s.length(); i++) {
+            tempRoot = s.charAt(i) == '1' ? tempRoot.right : tempRoot.left;
+            if (tempRoot.left == null && tempRoot.right == null) {
+                sb.append(tempRoot.data);
+                tempRoot = root;
+            }
+        }
+        System.out.print(sb);
     }
-
-
-
 }
 
 public class HuffmanDecoding {
@@ -110,7 +119,7 @@ public class HuffmanDecoding {
     }
 
     public static void main(String[] args) throws IOException {
-        Scanner input = new Scanner(new File("src/com/ip_kit_sample_test_cases/tree_huffman_decoding/input/input02.txt"));
+        Scanner input = new Scanner(new File("src/com/Pratice/sample_test_cases/interview_preparation/tree_huffman_decoding/input/input02.txt"));
 
         String test= input.next();
 
