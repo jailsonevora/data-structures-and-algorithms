@@ -47,6 +47,7 @@ class Decoding {
 
 */
 
+    // Big O -> O(S)
     void decode(String s, Node1 root) {
 
         StringBuilder sb = new StringBuilder();
