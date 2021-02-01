@@ -47,7 +47,7 @@ class Decoding {
 
 */
 
-    // Big O -> O(S)
+    // Big O -> O(S) S.length
     void decode(String s, Node1 root) {
 
         StringBuilder sb = new StringBuilder();
@@ -63,7 +63,7 @@ class Decoding {
         System.out.print(sb);
     }
 
-
+    // Big O -> O(S) S.length
     void decodeWithoutSB(String s, Node root) {
 
         Node tempRoot = root;
