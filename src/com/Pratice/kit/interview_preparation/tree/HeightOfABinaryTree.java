@@ -115,7 +115,7 @@ public class HeightOfABinaryTree {
     }
 
     public static void main(String[] args) throws  IOException{
-        Scanner scan = new Scanner(new File("src/com/ip_kit_sample_test_cases/tree_height_of_a_binary_tree/input/input00.txt"));
+        Scanner scan = new Scanner(new File("src/com/Pratice/sample_test_cases/interview_preparation/tree_height_of_a_binary_tree/input/input00.txt"));
         int t = scan.nextInt();
         Node root = null;
         while(t-- > 0) {
