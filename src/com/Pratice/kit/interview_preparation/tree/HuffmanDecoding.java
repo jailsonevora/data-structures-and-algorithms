@@ -61,6 +61,20 @@ class Decoding {
         }
         System.out.print(sb);
     }
+
+
+    void decodeWithoutSB(String s, Node root) {
+
+        Node tempRoot = root;
+
+        for (int i = 0; i < s.length(); i++) {
+            tempRoot = s.charAt(i) == '1' ? tempRoot.right : tempRoot.left;
+            if (tempRoot.left == null && tempRoot.right == null) {
+                System.out.print(tempRoot.data);
+                tempRoot = root;
+            }
+        }
+    }
 }
 
 public class HuffmanDecoding {
