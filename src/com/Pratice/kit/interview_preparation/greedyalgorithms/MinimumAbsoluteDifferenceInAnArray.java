@@ -42,7 +42,7 @@ public class MinimumAbsoluteDifferenceInAnArray {
 
     public static void main(String[] args) throws IOException {
 
-        Scanner scanner = new Scanner(new File("src/com/sample_test_cases/minimum_absolute_difference_in_an_array/input/input01.txt"));
+        Scanner scanner = new Scanner(new File("src/com/Pratice/sample_test_cases/interview_preparation/minimum_absolute_difference_in_an_array/input/input01.txt"));
 
         BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
 
