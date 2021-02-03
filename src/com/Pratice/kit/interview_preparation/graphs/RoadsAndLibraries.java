@@ -11,9 +11,55 @@ import java.util.regex.*;
 
 public class RoadsAndLibraries {
 
+    static class Graph {
+        int v;
+        LinkedList<Integer>[] adjList;
+        public Graph(int v) {
+            this.v = v;
+            adjList = new LinkedList[v];
+            for(int i = 0 ; i < v ; i++) {
+                adjList[i] = new LinkedList<>();
+            }
+        }
+        public void addEdge(int u , int v) {
+            adjList[u-1].add(v-1);
+            adjList[v-1].add(u-1);
+        }
+        public void dfs(int i , boolean[] visited, ArrayList<Integer> tmp) {
+            if(visited[i]) return;
+            visited[i] = true;
+            Iterator<Integer> it = adjList[i].iterator();
+            while(it.hasNext()) {
+                int val = it.next();
+                if(!visited[val]) {
+                    dfs(val,visited,tmp);
+                }
+            }
+            tmp.add(i);
+            return;
+        }
+    }
+
     // Complete the roadsAndLibraries function below.
     static long roadsAndLibraries(int n, int c_lib, int c_road, int[][] cities) {
-        return 000;
+        if(c_lib <= c_road) return n * 1l * c_lib;
+        Graph g = new Graph(n);
+        for(int[] i : cities) {
+            g.addEdge(i[0],i[1]);
+        }
+        long roads = 0;
+        long components = 0;
+        boolean[] visited = new boolean[n];
+        for(int i = 0 ; i < n ; i++) {
+            if(!visited[i]) {
+                ArrayList<Integer> tmp = new ArrayList<>();
+                g.dfs(i,visited,tmp);
+                roads += (long)tmp.size() - 1l;
+                components++;
+            }
+        }
+        return (components * c_lib) + (c_road * roads);
+
     }
 
     public static void main(String[] args) throws IOException {
