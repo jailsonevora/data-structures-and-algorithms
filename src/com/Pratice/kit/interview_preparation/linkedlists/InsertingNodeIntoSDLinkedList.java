@@ -135,7 +135,7 @@ public class InsertingNodeIntoSDLinkedList {
 
     public static void main(String[] args) throws IOException {
 
-        Scanner scanner = new Scanner(new File("src/com/sample_test_cases/Inserting_Node_Into_Sorted_Doubly_Linked_List/input/input07.txt"));
+        Scanner scanner = new Scanner(new File("src/com/Pratice/sample_test_cases/interview_preparation/Inserting_Node_Into_Sorted_Doubly_Linked_List/input/input07.txt"));
 
         BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
 
