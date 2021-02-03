@@ -43,7 +43,7 @@ public class CountTriplets {
 
     public static void main(String[] args) throws IOException {
 
-        BufferedReader bufferedReader = new BufferedReader(new FileReader("src/com/sample_test_cases/count_triplets_1/input/input00.txt"));
+        BufferedReader bufferedReader = new BufferedReader(new FileReader("src/com/Pratice/sample_test_cases/interview_preparation/count_triplets_1/input/input00.txt"));
         BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
 
         String[] nr = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");
