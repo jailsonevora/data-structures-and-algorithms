@@ -42,6 +42,7 @@ public class RoadsAndLibraries {
 
     // Complete the roadsAndLibraries function below.
     // dfs, components, greedy
+    // O(N)
     static long roadsAndLibraries(int n, int c_lib, int c_road, int[][] cities) {
         if(c_lib <= c_road) return n * 1l * c_lib;
         Graph g = new Graph(n);
