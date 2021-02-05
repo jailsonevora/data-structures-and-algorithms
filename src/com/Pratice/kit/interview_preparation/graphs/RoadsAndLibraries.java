@@ -61,7 +61,6 @@ public class RoadsAndLibraries {
             }
         }
         return (components * c_lib) + (c_road * roads);
-
     }
 
     public static void main(String[] args) throws IOException {
