@@ -30,7 +30,7 @@ public class FindNearestClone {
 
         Scanner scanner = new Scanner(new File("src/com/Pratice/sample_test_cases/interview_preparation/find_the_nearest_clone/input/input00.txt"));
 
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+        BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
 
         String[] graphNodesEdges = scanner.nextLine().split(" ");
         int graphNodes = Integer.parseInt(graphNodesEdges[0].trim());
