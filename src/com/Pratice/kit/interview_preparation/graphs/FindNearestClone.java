@@ -44,12 +44,12 @@ public class FindNearestClone {
             graphTo[i] = Integer.parseInt(graphFromTo[1].trim());
         }
 
-        long[] ids = new long[graph_nodes];
+        long[] ids = new long[graphNodes];
 
         String[] idsItems = scanner.nextLine().split(" ");
         scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 
-        for (int i = 0; i < graph_nodes; i++) {
+        for (int i = 0; i < graphNodes; i++) {
             long idsItem = Long.parseLong(idsItems[i]);
             ids[i] = idsItem;
         }
