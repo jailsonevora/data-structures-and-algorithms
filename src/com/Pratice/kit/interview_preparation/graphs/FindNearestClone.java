@@ -21,7 +21,6 @@ public class FindNearestClone {
      * 3. An edge exists between <name>From[i] to <name>To[i].
      *
      */
-
     static int findShortest(int graphNodes, int[] graphFrom, int[] graphTo, long[] ids, int val) {
         return 0;
     }
