@@ -55,8 +55,6 @@ public class TwoDArrayDS {
         return total;
     }
 
-    //private static final Scanner scanner = new Scanner(System.in);
-
     public static void main(String[] args) throws IOException {
 
         Scanner scanner = new Scanner(new File("src/com/Pratice/sample_test_cases/interview_preparation/twod_array_ds/input/input03.txt"));
