@@ -27,6 +27,7 @@ public class MinimumAbsoluteDifferenceInAnArray {
     static int minimumAbsoluteDifferenceBruteForce(int[] arr) {
 
         int minimumABS = Integer.MAX_VALUE, result = 0;
+
         for (int i = 0; i < arr.length; i++) {
             for (int j = i+1; j < arr.length; j++) {
                 result = (arr[i]) - (arr[j]);
