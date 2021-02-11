@@ -54,6 +54,7 @@ public class NewYearChaos {
 
     public static void main(String[] args) throws IOException{
 
+
         Scanner scanner = new Scanner(new File("src/com/sample_test_cases/new_year_chaos/input/input01.txt"));
 
         int t = scanner.nextInt();
