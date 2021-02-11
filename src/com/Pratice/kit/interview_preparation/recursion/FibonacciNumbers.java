@@ -30,7 +30,7 @@ public class FibonacciNumbers {
 
 
     public static void main(String[] args)  throws IOException {
-        Scanner scanner = new Scanner(new File("src/com/sample_test_cases/fibonacci_numbers/input/input06.txt"));
+        Scanner scanner = new Scanner(new File("src/com/Pratice/sample_test_cases/interview_preparation/fibonacci_numbers/input/input06.txt"));
         int n = scanner.nextInt();
         scanner.close();
         System.out.println(fibonacci(n, new int[n+1]));

@@ -26,7 +26,7 @@ public class AlternatingCharacters {
 
     public static void main(String[] args) throws IOException {
 
-        Scanner scanner = new Scanner(new File("src/com/sample_test_cases/alternating_characters/input/input13.txt"));
+        Scanner scanner = new Scanner(new File("src/com/Pratice/sample_test_cases/interview_preparation/alternating_characters/input/input13.txt"));
 
         BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
 

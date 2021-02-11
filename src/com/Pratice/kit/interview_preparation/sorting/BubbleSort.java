@@ -32,7 +32,7 @@ public class BubbleSort {
 
     public static void main(String[] args) throws IOException {
 
-        Scanner scanner = new Scanner(new File("src/com/sample_test_cases/bubble_sort/input/input01.txt"));
+        Scanner scanner = new Scanner(new File("src/com/Pratice/sample_test_cases/interview_preparation/bubble_sort/input/input01.txt"));
 
         int n = scanner.nextInt();
         scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");

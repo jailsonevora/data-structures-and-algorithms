@@ -56,11 +56,9 @@ public class TwoDArrayDS {
         return total;
     }
 
-    //private static final Scanner scanner = new Scanner(System.in);
-
     public static void main(String[] args) throws IOException {
 
-        Scanner scanner = new Scanner(new File("src/com/sample_test_cases/twod_array_ds/input/input03.txt"));
+        Scanner scanner = new Scanner(new File("src/com/Pratice/sample_test_cases/interview_preparation/twod_array_ds/input/input03.txt"));
 
         //BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
         BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));

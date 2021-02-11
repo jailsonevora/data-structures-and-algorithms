@@ -12,7 +12,7 @@ public class MaximumElement {
     public static void main(String[] args) throws IOException {
         /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
 
-        Scanner scanner = new Scanner(new File("src/com/ps_kit_sample_test_cases/stacks/maximum_element/input/input00.txt"));
+        Scanner scanner = new Scanner(new File("src/com/Pratice/sample_test_cases/problem_solving/maximum_element/input/input00.txt"));
 
         int queries = scanner.nextInt();
         Stack<Integer> stack = new Stack<Integer>();

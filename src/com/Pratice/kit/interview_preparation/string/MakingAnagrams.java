@@ -36,7 +36,7 @@ public class MakingAnagrams {
     public static void main(String[] args) throws IOException {
 
 
-        Scanner scanner = new Scanner(new File("src/com/sample_test_cases/making_anagrams/input/input01.txt"));
+        Scanner scanner = new Scanner(new File("src/com/Pratice/sample_test_cases/interview_preparation/making_anagrams/input/input01.txt"));
 
         BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
 

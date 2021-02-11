@@ -31,7 +31,7 @@ public class LowestCommonAncestor {
     }
 
     public static void main(String[] args) throws IOException{
-        Scanner scan = new Scanner(new File("src/com/ip_kit_sample_test_cases/binary_search_tree_lowest_common_ancestor/input/input00.txt"));
+        Scanner scan = new Scanner(new File("src/com/Pratice/sample_test_cases/interview_preparation/binary_search_tree_lowest_common_ancestor/input/input00.txt"));
         int t = scan.nextInt();
         Node root = null;
         while(t-- > 0) {
