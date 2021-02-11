@@ -12,6 +12,7 @@ public class CountTriplets {
     // Drop constant term -> O(N)
     // Complete the countTriplets function below.
     static long countTriplets(List<Long> arr, long r) {
+
         HashMap<Long, Long> left = new HashMap<>();
         HashMap<Long, Long> right = new HashMap<>();
 
