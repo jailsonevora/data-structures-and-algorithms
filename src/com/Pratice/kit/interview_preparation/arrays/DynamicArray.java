@@ -26,6 +26,11 @@ class DynamicArraySolution {
 
     public static List<Integer> dynamicArray(int n, List<List<Integer>> queries) {
         // Write your code here
+        int[][] arr = new int[n][n];
+        int lastAnswer = 0;
+
+        int idx = 
+
         return new ArrayList<>();
     }
 
